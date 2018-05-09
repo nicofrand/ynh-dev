@@ -58,7 +58,6 @@ sudo insmod /lib/modules/4.4.33-1-MANJARO/extramodules/vboxnetflt.ko.gz
 sudo insmod /lib/modules/4.4.33-1-MANJARO/extramodules/vboxnetadp.ko.gz
 ```
 
-
 #### Install ynh-dev
 
 Clone the ynh-dev repo :
@@ -87,6 +86,12 @@ This command is a helper to run a Vagrant virtual machine in the right place wit
 The `run` command takes 2 arguments: domain and YunoHost version.
 
 After running the container, you'll be automatically logged inside a new yunohost VM or inside the previous suspended VM.
+
+If you meet an error with `vboxsf` you might need to install the guest addons:
+
+```bash
+vagrant plugin install vagrant-vbguest
+```
 
 #### Shared folder between host and virtual machines
 
